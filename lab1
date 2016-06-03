@@ -1,21 +1,21 @@
-// ConsoleApplication59.cpp: îïðåäåëÿåò òî÷êó âõîäà äëÿ êîíñîëüíîãî ïðèëîæåíèÿ.
+// ConsoleApplication59.cpp: 
 //
 
 #include "stdafx.h" 
 #include <fstream> 
 #include <iostream> 
 #include <cstring> 
-using namespace std;//ïðîñòðàíñòâî èìåí äëÿ ôàéëà1 è ôà ëà2 
+using namespace std;
 int _tmain(int argc, _TCHAR* argv[])
 {
 	char str1[10][50];
 	char str2[10][50];
 
-	ifstream file1("file1.txt"); // îòêðûëè ôàéë1 äëÿ ÷òåíèÿ 
-	ifstream file2("file2.txt"); // îòêðûëè ôàéë2 äëÿ ÷òåíèÿ 
+	ifstream file1("file1.txt");  
+	ifstream file2("file2.txt"); 
 
 
-								 //_________÷èòàåì ôàéë1________________________________ 
+								 
 	{ int i = 0;
 	while (file1) {
 		const int max_lenght = 50;
@@ -28,7 +28,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 
 
-	//_________÷èòàåì ôàéë2_________________________________ 
+
 	{ int i = 0;
 	while (file2) {
 		const int max_lenght = 50;
@@ -41,7 +41,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	}
 
 
-	//__________ïðîñòî âûâîäèì ñîäåðæàíèå ôàéëà1_______________________________ 
+	
 	for (int j = 0; j < 3; j++) {
 		for (int i = 0; i < 3; i++) {
 			printf_s("%c", str1[j][i]);
@@ -49,7 +49,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	} printf_s("\n");
 
 
-	//___________ñîäåðæàíèå ôàéëà2______________________________ 
+
 	for (int j = 0; j < 3; j++) {
 		for (int i = 0; i < 3; i++) {
 			printf_s("%c", str2[j][i]);
@@ -57,7 +57,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	} printf_s("\n");
 
 
-	//_____________íàõîäèì ðàçëè÷èÿ â ñòðîêà ôàéëà1 ñ ôàéëîì 2____________________________ 
+	
 	for (int i = 0; i < 3; i++) {
 		if ((strcmp(str1[i], str2[i]) > 0) || strcmp(str1[i], str2[i]) < 0) {
 			printf_s("file1.txt %d ", i + 1);
@@ -68,7 +68,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	}printf_s("\n");
 
 
-	//_____________íàõîäèì ðàçëè÷èÿ â ñòðîêà ôàéëà2 ñ ôàéëîì 1____________________________ 
+
 	for (int i = 0; i < 3; i++) {
 		if ((strcmp(str2[i], str1[i]) > 0) || strcmp(str2[i], str1[i]) < 0) {
 			printf_s("file2.txt %d ", i + 1);
